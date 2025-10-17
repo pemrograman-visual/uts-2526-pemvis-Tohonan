@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bilangan_prima"/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04:54:22 PM"/>
+        <attribute name="created" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzA0OjUyOjM1IFBNOzI1NDM="/>
+        <attribute name="edited" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzA0OjUzOjM5IFBNOzE7TEVOT1ZPO0xBUFRPUC1BMlNBTTNNMDsyMDI1LTEwLTA4OzAyOjU0OjAwIFBNO2JpbGFuZ2FuX3ByaW1hWzFdLmZwcmc7NzcwOQ=="/>
+        <attribute name="edited" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzA0OjU0OjIyIFBNOzE7MjY0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="input, loop, angka, HasilBagi, counter" type="Integer" array="False" size=""/>
+            <output expression="&quot;Berapa Banyak ?&quot;" newline="True"/>
+            <input variable="input"/>
+            <assign variable="angka" expression="1"/>
+            <while expression="input &gt; 0">
+                <assign variable="counter" expression="0"/>
+                <for variable="loop" start="1" end="angka" direction="inc" step="1">
+                    <assign variable="HasilBagi" expression="angka % loop"/>
+                    <if expression="HasilBagi = 0">
+                        <then>
+                            <assign variable="counter" expression="counter + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="counter = 2">
+                    <then>
+                        <output expression="angka" newline="True"/>
+                        <assign variable="input" expression="input-1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="angka" expression="angka+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
