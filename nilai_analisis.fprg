@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="nilai_analisis"/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 03:10:13 PM"/>
+        <attribute name="created" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzAyOjU2OjU3IFBNOzI1NDk="/>
+        <attribute name="edited" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzAzOjEwOjEzIFBNOzE7MjY0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="Ratarata, Tertinggi, Terendah, Total" type="Real" array="False" size=""/>
+            <declare name="DEL" type="Real" array="True" size="4"/>
+            <assign variable="Total" expression="0"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <input variable="DEL[i]"/>
+                <assign variable="Total" expression="Total + DEL[i]"/>
+            </for>
+            <assign variable="Ratarata" expression="Total / 4"/>
+            <assign variable="Tertinggi" expression="DEL[0]"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <if expression="DEL[i] &gt; Tertinggi">
+                    <then>
+                        <assign variable="Tertinggi" expression="DEL[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="Terendah" expression="DEL[0]"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <if expression="DEL[i] &lt; Terendah">
+                    <then>
+                        <assign variable="Terendah" expression="DEL[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Rata-rata&quot; &amp; Ratarata" newline="True"/>
+            <output expression="&quot;Tertinggi&quot; &amp; Tertinggi" newline="True"/>
+            <output expression="&quot;Terendah&quot; &amp; Terendah" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

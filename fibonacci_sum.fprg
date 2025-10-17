@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fibonacci_sum"/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 03:54:14 PM"/>
+        <attribute name="created" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzAzOjEwOjE1IFBNOzI1MzQ="/>
+        <attribute name="edited" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzAzOjU0OjE0IFBNOzM7MjY1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, a, b, c, sum" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="a" expression="1"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="sum" expression="sum + a"/>
+                <assign variable="c" expression="a + b"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="c"/>
+            </for>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

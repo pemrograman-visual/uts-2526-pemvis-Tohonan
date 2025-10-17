@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="faktorial"/>
+        <attribute name="authors" value="Asus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 02:00:34 PM"/>
+        <attribute name="created" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzAxOjQyOjQyIFBNOzI1Mzc="/>
+        <attribute name="edited" value="QXN1cztFTU9USU9OTEVTUzsyMDI1LTEwLTE3OzAyOjAwOjM0IFBNOzE7MjY0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, hasil" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan bilangan&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="hasil" expression="1"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt;= n">
+                <assign variable="hasil" expression="hasil*i"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="&quot;Hasil factorial&quot;" newline="True"/>
+            <output expression="hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
